@@ -24,7 +24,7 @@ make
 ## Environment
 | Name | Version |
 | ---- | ------- |
-| Ubuntu | [20.04](https://releases.ubuntu.com/20.04/) |
+| Ubuntu | [20.04](https://releases.ubuntu.com/20.04/), [22.04](https://releases.ubuntu.com/22.04/) |
 | LLVM (clang, lld) | [14.0.6](https://github.com/llvm/llvm-project/releases/tag/llvmorg-14.0.6) |
 | AFL++ | [4.01c](https://github.com/AFLplusplus/AFLplusplus/releases/tag/4.01c) |
 | KLEE | [v2.3](https://github.com/klee/klee/releases/tag/v2.3) |

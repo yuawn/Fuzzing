@@ -7,14 +7,13 @@ SRC=$(pwd)
 sudo apt update
 sudo apt install -y libz3-dev
 # sudo apt install -y python3-tabulate
-# sudo apt install -y clang-11 llvm-11 llvm-11-dev llvm-11-tools
 # LLVM
+sudo apt install -y clang-11 llvm-11 llvm-11-dev llvm-11-tools
 sudo apt install -y lsb-release wget software-properties-common
 if [ ! -f "llvm.sh" ]; then
     wget https://apt.llvm.org/llvm.sh
     chmod +x llvm.sh
 fi
-sudo ./llvm.sh 11
 sudo ./llvm.sh 14
 
 

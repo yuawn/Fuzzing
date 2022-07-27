@@ -91,7 +91,7 @@ int main() {
 
         if (maze[y][x] == '#') {
 
-            puts("You win!");
+            puts("You win :D");
             printf("Solution %s\n", moves);
 #if KLEE
             klee_assert(0);
@@ -104,7 +104,7 @@ int main() {
 
             maze[y][x] = 'X';
             render();
-            puts("You died.");
+            puts("You dead :(");
             exit(-1);
 
         } else {

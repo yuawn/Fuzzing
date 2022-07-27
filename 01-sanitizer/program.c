@@ -10,7 +10,7 @@ char input[MAX];
 void SILENT_BUG() {
 
     puts("reach the bug.");
-    input[MAX + 2] = 0; // silent bug
+    input[MAX + 1] = 0; // silent bug
 
 }
 

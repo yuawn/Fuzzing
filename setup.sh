@@ -23,7 +23,7 @@ sudo ./llvm.sh 14
 # git clone -b 2.3.3 --depth 1 https://github.com/stp/stp.git
 # cd stp; mkdir build; cd build
 # cmake ..
-# make -j $(echo 2)
+# make -j $(nproc)
 # sudo make install
 # cd $SRC 
 
@@ -33,7 +33,7 @@ sudo ./llvm.sh 14
 # cd z3
 # CXX=clang++-11 CC=clang-11 python3 scripts/mk_make.py
 # cd build
-# make -j $(echo 2)
+# make -j $(nproc)
 # sudo make install
 # cd $SRC
 
@@ -47,7 +47,7 @@ if [ ! -d "klee-uclibc" ]; then
 fi
 cd klee-uclibc
 ./configure --make-llvm-lib --with-cc clang-11 --with-llvm-config llvm-config-11
-make -j $(echo 2)
+make -j $(nproc)
 cd $SRC
 
 # KLEE
@@ -63,7 +63,7 @@ cmake \
     -DLLVM_CONFIG_BINARY=/usr/bin/llvm-config-11 \
     ..
     # -DENABLE_SOLVER_STP=ON \
-make -j $(echo 2)
+make -j $(nproc)
 # make systemtests
 sudo make install
 cd $SRC

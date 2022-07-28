@@ -31,3 +31,6 @@ Fuzzing with persistent mode
 export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 afl-fuzz -i input -o output -- ./harness
 ```
+
+## Reference
+- [https://github.com/AFLplusplus/AFLplusplus/tree/stable/utils/aflpp_driver](https://github.com/AFLplusplus/AFLplusplus/tree/stable/utils/aflpp_driver)

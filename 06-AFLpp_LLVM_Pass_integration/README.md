@@ -112,18 +112,7 @@ index 2667ae28..7da0b89c 100644
  
 ```
 
-Fuzz the program
-```shell
-afl-fuzz -i input -o output -- ./program
-```
-
-File input
-```shell
-afl-clang-lto -w -DFILE program.c -o program_file_input
-afl-fuzz -i input -o output -- ./program_file_input @@
-```
-
-Build AFL++ with new LLVM Pass
+Build AFL++ with custom LLVM Pass
 ```shell
 git clone -b 4.01c --depth 1 https://github.com/AFLplusplus/AFLplusplus.git
 
@@ -139,7 +128,7 @@ Compile target program with custom instrumentation
 AFL_DEMO=1 ./AFLplusplus/afl-clang-lto -w program.c -o program_custom_instrumented
 ```
 
-Fuzz
+Catch the fmt bug
 ```shell
 afl-fuzz -i input -o output -- ./program_custom_instrumented
 ```

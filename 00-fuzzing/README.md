@@ -18,6 +18,6 @@ afl-fuzz -i input -o output -- ./program
 
 File input
 ```shell
-afl-clang-lto -w -DFILE program.c -o program_file_input
+afl-clang-lto -w -DFILE_INPUT program.c -o program_file_input
 afl-fuzz -i input -o output -- ./program_file_input @@
 ```

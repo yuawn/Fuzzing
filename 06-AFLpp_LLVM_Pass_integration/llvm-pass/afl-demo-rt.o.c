@@ -60,14 +60,14 @@ void __demo_record_input(char *addr) {
   for (u32 i = 0; i < count; ++i)
     if (addr == addrs[i]) return;
 
-  addrs[count++] = addr;
-
   if (count == size) {
 
     size *= 2;
     addrs = realloc(addrs, size * sizeof(char *));
 
   }
+
+  addrs[count++] = addr;
 
 }
 
